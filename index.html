@@ -1,20 +1,564 @@
-<!doctype html><html lang="fr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#061525"><title>SOLAMI TEAM</title><style>
-:root{--bg:#061525;--p:#0b2035;--p2:#102b47;--line:#204666;--blue:#0878ff;--green:#08bd78;--txt:#f1f7ff;--muted:#a7bfd5}*{box-sizing:border-box}body{margin:0;background:linear-gradient(140deg,#04101d,#08203a);color:var(--txt);font:14px/1.45 Arial,sans-serif}.layout{display:grid;grid-template-columns:200px 1fr;min-height:100vh}.side{background:#04111f;padding:18px 12px;border-right:1px solid var(--line)}.brand{font-size:22px;font-weight:900;margin:4px 8px}.brand span{color:#29a9ff}.tag{color:var(--muted);font-size:11px;margin:0 8px 24px}.nav{display:grid;gap:6px}.nav button,.mobile button{background:transparent;text-align:left;color:#dceafa;border:1px solid transparent;padding:11px;border-radius:9px;font-weight:bold}.nav button.active,.nav button:hover{background:#086bd8}.main{padding:18px;min-width:0}.top{display:flex;gap:10px;margin-bottom:14px}.top input{flex:1}.input, input,select,textarea{background:#071a2d;border:1px solid #285070;color:white;padding:10px;border-radius:8px;min-width:0}.user{background:var(--p);border:1px solid var(--line);border-radius:10px;padding:10px;white-space:nowrap}.hero{border:1px solid #285078;border-radius:15px;padding:22px;background:linear-gradient(90deg,#041321ed,#04132180),url('https://images.unsplash.com/photo-1509391366360-2e959784a276?auto=format&fit=crop&w=1400&q=80') center/cover;display:flex;justify-content:space-between;gap:15px}.hero h1{margin:0;font-size:28px}.muted{color:var(--muted)}.goal,.card{background:linear-gradient(145deg,#0b2035,#071a2b);border:1px solid #1c4262;border-radius:13px;padding:14px}.goal label{display:block;margin:7px}.tiles{display:grid;grid-template-columns:repeat(7,1fr);gap:9px;margin:12px 0}.tile{border:1px solid #255174;border-radius:12px;padding:14px 8px;text-align:center;background:linear-gradient(145deg,#0d3861,#08213a);cursor:pointer}.tile:nth-child(2){background:linear-gradient(145deg,#075c42,#092b2a)}.tile:nth-child(3){background:linear-gradient(145deg,#8a4d08,#42280d)}.tile:nth-child(4){background:linear-gradient(145deg,#49218a,#201544)}.tile:nth-child(5){background:linear-gradient(145deg,#81252c,#35131c)}.tile b{display:block;margin:5px 0}.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.card h2{font-size:16px;margin:0 0 10px}.row{display:flex;align-items:center;gap:8px;padding:10px 0;border-top:1px solid #183751}.row:first-of-type{border-top:0}.row .grow{flex:1;min-width:0}.pill{font-size:11px;background:#087e53;padding:4px 7px;border-radius:15px}.bar{height:6px;background:#193b58;border-radius:10px;margin-top:6px;overflow:hidden}.bar span{display:block;height:100%;background:linear-gradient(90deg,#0878ff,#08c779)}button{cursor:pointer;background:var(--blue);color:white;border:0;border-radius:9px;padding:10px 13px;font-weight:bold}button.green{background:#08a968}button.secondary{background:#183b58;border:1px solid var(--line)}button.red{background:#b72d39}.section{display:none}.section.active{display:block}.head{display:flex;justify-content:space-between;align-items:center;margin:4px 0 14px;gap:10px}.head h1{margin:0;font-size:24px}.two{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.field{display:grid;gap:5px;margin:10px 0}.field label{font-size:12px;color:#c7dbee}.field input,.field select,.field textarea{width:100%}.field textarea{min-height:75px}.stat{display:flex;justify-content:space-between;padding:8px 0;border-top:1px solid #193751}.big{font-size:30px;font-weight:900;text-align:center;margin:8px}.table{width:100%;border-collapse:collapse}.table td,.table th{text-align:left;padding:9px 6px;border-bottom:1px solid #193751}.table th{color:var(--muted)}.note{padding:11px;border:1px solid #28745c;background:#0a3b31;border-radius:9px;margin:10px 0}.warn{padding:11px;border:1px solid #875116;background:#442a12;border-radius:9px;margin:10px 0}.mobile{display:none}
-@media(max-width:1050px){.tiles{grid-template-columns:repeat(4,1fr)}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:700px){.layout{display:block}.side{display:none}.main{padding:10px 10px 80px}.top input{width:100%;flex-basis:100%;order:2}.top{flex-wrap:wrap}.user{margin-left:auto}.hero{display:block;padding:16px}.hero h1{font-size:23px}.goal{margin-top:12px}.tiles{grid-template-columns:repeat(2,1fr)}.grid,.two{grid-template-columns:1fr}.head{align-items:flex-start;flex-direction:column}.mobile{display:flex;position:fixed;bottom:0;left:0;right:0;background:#04111f;border-top:1px solid var(--line);z-index:4;justify-content:space-around}.mobile button{font-size:11px;text-align:center;flex:1;padding:7px 2px}.table{font-size:12px}}
-</style></head><body><div class="layout"><aside class="side"><div class="brand">☀ SOLAMI<span>TEAM</span></div><div class="tag">Chantiers • Équipe • Heures • Performance</div><nav class="nav"><button class="active" data-page="home">⌂ Accueil</button><button data-page="jobs">▣ Chantiers</button><button data-page="team">♟ Équipe</button><button data-page="hours">◷ Heures & Sup</button><button data-page="materials">◇ Matériel</button><button data-page="assistant">⚡ Assistant technique</button><button data-page="safety">⬡ Sécurité</button><button data-page="training">🎓 Formation</button><button data-page="reports">▤ Rapports</button></nav></aside><main class="main"><div class="top"><input id="search" placeholder="Rechercher un chantier, un membre…"><div class="user">☀ La Réunion · 28°C</div><div class="user">👤 Joan · Chef d'équipe</div></div>
-<section id="page-home" class="section active"><div class="hero"><div><h1>Bonjour Joan 👋</h1><b>Chef d'équipe photovoltaïque</b><p>Organise, accompagne, fais progresser.</p></div><div class="goal"><b>🎯 Objectifs du jour</b><label>☑ Briefing sécurité</label><label>☑ Pose des panneaux</label><label>☐ Câblage et contrôles</label><label>☐ Photos de fin de chantier</label></div></div><div class="tiles"><div class="tile" data-go="jobs">▣<b>Chantiers</b><small>Planifier et suivre</small></div><div class="tile" data-go="team">♟<b>Équipe</b><small>Répartir les tâches</small></div><div class="tile" data-go="hours">◷<b>Heures & Sup</b><small>Saisir et valider</small></div><div class="tile" data-go="assistant">⚡<b>Assistant</b><small>Aide technique</small></div><div class="tile" data-go="safety">⬡<b>Sécurité</b><small>Checklist</small></div><div class="tile" data-go="training">🎓<b>Formation</b><small>Progresser</small></div><div class="tile" data-go="reports">▤<b>Rapports</b><small>Compte rendu</small></div></div><div class="grid"><div class="card"><h2>Chantiers en cours</h2><div id="homeJobs"></div></div><div class="card"><h2>Équipe sur le terrain</h2><div id="homeTeam"></div></div><div class="card"><h2>Mes heures aujourd'hui</h2><div class="big" id="homeTotal">7h30</div><div class="stat"><span>Normales</span><b id="homeNormal">7h00</b></div><div class="stat"><span>Supplémentaires</span><b id="homeOver">0h30</b></div><button class="green" style="width:100%" data-go="hours">Saisir mes heures</button></div></div></section>
-<section id="page-jobs" class="section"><div class="head"><h1>▣ Chantiers</h1><button id="clearJob">Nouveau chantier</button></div><div class="two"><div class="card"><h2>Liste des chantiers</h2><div id="jobsList"></div></div><div class="card"><h2>Créer / modifier</h2><form id="jobForm"><input type="hidden" id="jobId"><div class="field"><label>Nom du chantier</label><input id="jobName" required placeholder="Villa Dupont"></div><div class="field"><label>Lieu</label><input id="jobPlace" placeholder="Saint-Leu"></div><div class="field"><label>Puissance (kWc)</label><input id="jobPower" type="number" min="0" step=".1"></div><div class="field"><label>Nombre de panneaux</label><input id="jobPanels" type="number" min="0"></div><div class="field"><label>Avancement (%)</label><input id="jobProgress" type="number" min="0" max="100" value="0"></div><div class="field"><label>Statut</label><select id="jobStatus"><option>Planifié</option><option>En cours</option><option>Terminé</option><option>Bloqué</option></select></div><div class="field"><label>Notes / blocages</label><textarea id="jobNotes"></textarea></div><button>Enregistrer le chantier</button></form></div></div></section>
-<section id="page-team" class="section"><div class="head"><h1>♟ Gestion de l'équipe</h1></div><div class="two"><div class="card"><h2>Membres</h2><div id="teamList"></div></div><div class="card"><h2>Ajouter un membre</h2><form id="personForm"><div class="field"><label>Nom</label><input id="personName" required></div><div class="field"><label>Rôle</label><select id="personRole"><option>Technicien PV</option><option>Apprenti</option><option>Électricien</option><option>Chef d'équipe</option></select></div><div class="field"><label>Statut</label><select id="personStatus"><option>Sur chantier</option><option>Disponible</option><option>Absent</option><option>En pause</option></select></div><button>Ajouter à l'équipe</button></form></div></div></section>
-<section id="page-hours" class="section"><div class="head"><h1>◷ Heures & heures supplémentaires</h1><button id="export">Exporter CSV</button></div><div class="two"><div class="card"><h2>Saisie des heures</h2><form id="hoursForm"><div class="field"><label>Technicien</label><select id="hourPerson"></select></div><div class="field"><label>Date</label><input id="hourDate" type="date" required></div><div class="field"><label>Chantier</label><select id="hourJob"></select></div><div class="field"><label>Heures normales</label><input id="normal" type="number" min="0" max="24" step=".25" value="7"></div><div class="field"><label>Heures supplémentaires</label><input id="overtime" type="number" min="0" max="24" step=".25" value=".5"></div><div class="field"><label>Pause (heures)</label><input id="break" type="number" min="0" max="8" step=".25" value="0"></div><div class="field"><label>Commentaire</label><textarea id="comment"></textarea></div><button class="green">Enregistrer les heures</button></form></div><div class="card"><h2>Récapitulatif</h2><div class="stat"><span>Heures normales</span><b id="sumNormal">0h00</b></div><div class="stat"><span>Heures supplémentaires</span><b id="sumOver">0h00</b></div><div class="stat"><span>Total</span><b id="sumAll">0h00</b></div><p class="muted">Les saisies sont stockées localement sur cet appareil. Vérifie les règles de validation avec ton employeur.</p></div></div><div class="card" style="margin-top:12px;overflow:auto"><h2>Historique</h2><table class="table"><thead><tr><th>Date</th><th>Technicien</th><th>Chantier</th><th>Normales</th><th>Sup.</th><th>Commentaire</th><th></th></tr></thead><tbody id="hourRows"></tbody></table></div></section>
-<section id="page-materials" class="section"><div class="head"><h1>◇ Matériel à préparer</h1><button id="addMat">+ Ajouter</button></div><div class="card"><div id="materialsList"></div><form id="matForm" style="display:none"><div class="field"><label>Matériel</label><input id="matName" required></div><div class="field"><label>Quantité</label><input id="matQty" required></div><button>Ajouter</button></form></div></section>
-<section id="page-assistant" class="section"><div class="head"><h1>⚡ Assistant technique PV</h1></div><div class="two"><div class="card"><h2>Fiches pratiques</h2><div class="field"><label>Thème</label><select id="topic"><option value="structure">Pose de structures</option><option value="panels">Pose des panneaux</option><option value="dc">Câblage DC</option><option value="inverter">Onduleur</option><option value="ac">Raccordement AC</option><option value="commission">Mise en service</option><option value="fault">Diagnostic de panne</option><option value="sav">Maintenance et SAV</option></select></div><button id="showTech">Afficher la fiche</button><div id="techResult" class="note">Choisis un sujet pour afficher les points de contrôle.</div></div><div class="card"><h2>Important — sécurité</h2><div class="warn">Cette aide ne remplace pas les procédures de l'entreprise, les notices fabricants, les normes applicables ni les habilitations requises. En cas de doute ou de danger, arrête l'intervention, sécurise la zone et contacte le responsable compétent.</div></div></div></section>
-<section id="page-safety" class="section"><div class="head"><h1>⬡ Checklist sécurité</h1></div><div class="card"><p class="muted">Checklist de préparation — à adapter à l'évaluation des risques du chantier.</p><div id="safetyList"></div><button class="green" id="saveSafety">Enregistrer la checklist</button><p id="safetyStatus" class="muted"></p></div></section>
-<section id="page-training" class="section"><div class="head"><h1>🎓 Formation chef d'équipe</h1></div><div class="two"><div class="card"><h2>Progression</h2><div class="big" id="trainingPct">0%</div><div class="bar"><span id="trainingBar"></span></div><p class="muted">Coche les modules terminés pour suivre ta progression vers responsable technique.</p></div><div class="card"><h2>Modules</h2><div id="trainingList"></div></div></div></section>
-<section id="page-reports" class="section"><div class="head"><h1>▤ Rapport de chantier</h1><button id="print">Imprimer / PDF</button></div><div class="card"><form id="reportForm"><div class="field"><label>Chantier</label><select id="reportJob"></select></div><div class="field"><label>Date</label><input id="reportDate" type="date"></div><div class="field"><label>Travaux réalisés</label><textarea id="done"></textarea></div><div class="field"><label>Difficultés / réserves</label><textarea id="issues"></textarea></div><div class="field"><label>Prochaine étape</label><textarea id="next"></textarea></div><button type="button" id="makeReport">Générer le compte rendu</button></form><div id="reportPreview" class="note" style="display:none"></div></div></section>
-</main></div><div class="mobile"><button data-page="home" class="active">⌂<br>Accueil</button><button data-page="jobs">▣<br>Chantiers</button><button data-page="hours">◷<br>Heures</button><button data-page="assistant">⚡<br>Assistant</button><button data-page="team">♟<br>Équipe</button></div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111111">
+<title>HS Solami — Gestion d’équipe & Chef PV</title>
+<link rel="apple-touch-icon" sizes="180x180" href="logo noir or.png">
+<link rel="icon" type="image/png" href="logo noir or.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#101010;--surface:#191919;--surface2:#222222;--surface3:#2b2b2b;
+  --gold:#e6bd65;--gold2:#f3d993;--text:#f5f3ee;--muted:#a6a29a;
+  --line:rgba(255,255,255,.09);--green:#68d6a0;--red:#ff7777;--blue:#8eb8ff;
+  --radius:20px;--shadow:0 14px 35px rgba(0,0,0,.2)
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:radial-gradient(ellipse at top right,rgba(230,189,101,.07),transparent 35%),var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;padding:0 0 calc(94px + env(safe-area-inset-bottom))}
+button,input,select,textarea{font:inherit}
+button{cursor:pointer}
+button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--gold);outline-offset:2px}
+.app{max-width:1180px;margin:auto;padding:22px 22px 35px}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:28px}
+.brand{display:flex;align-items:center;gap:13px;min-width:0}
+.brand-logo{width:52px;height:52px;object-fit:cover;border-radius:15px;background:#242424;border:1px solid rgba(230,189,101,.25)}
+.brand-mark{width:52px;height:52px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(145deg,#34302a,#171717);border:1px solid rgba(230,189,101,.35);color:var(--gold);font-family:Manrope,sans-serif;font-weight:800;font-size:17px;letter-spacing:-1px}
+.brand h1{font:800 19px Manrope,sans-serif;margin:0;letter-spacing:.3px}
+.brand p{font-size:12px;color:var(--muted);margin:4px 0 0}
+.top-right{display:flex;align-items:center;gap:10px;color:var(--muted);font-size:12px;text-align:right}
+.status-dot{display:inline-block;width:7px;height:7px;background:var(--green);border-radius:50%;margin-right:6px}
+.page{display:none;animation:fade .22s ease}
+.page.active{display:block}
+@keyframes fade{from{opacity:.45;transform:translateY(4px)}to{opacity:1;transform:none}}
+.page-heading{display:flex;justify-content:space-between;align-items:flex-end;gap:15px;margin:0 0 22px}
+.eyebrow{font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:8px}
+h2{font:800 clamp(25px,4vw,34px) Manrope,sans-serif;letter-spacing:-.8px;margin:0}
+.subtitle{color:var(--muted);font-size:13px;margin:8px 0 0;line-height:1.55}
+.date-chip{padding:10px 13px;border:1px solid var(--line);border-radius:13px;background:var(--surface);font-size:12px;color:var(--muted);white-space:nowrap}
+.hero{border:1px solid rgba(230,189,101,.18);border-radius:24px;padding:24px;background:linear-gradient(120deg,rgba(230,189,101,.10),rgba(255,255,255,.015) 60%),#191919;box-shadow:var(--shadow);margin-bottom:18px;position:relative;overflow:hidden}
+.hero:after{content:"";position:absolute;width:180px;height:180px;border:1px solid rgba(230,189,101,.12);border-radius:50%;right:-55px;top:-80px;box-shadow:0 0 0 22px rgba(230,189,101,.025),0 0 0 45px rgba(230,189,101,.02)}
+.hero .welcome{font-size:13px;color:var(--muted);margin-bottom:7px}
+.hero h2{font-size:clamp(24px,4vw,32px);position:relative;z-index:1}
+.hero h2 span{color:var(--gold2)}
+.hero-bottom{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-top:20px;position:relative;z-index:1}
+.hero-note{font-size:12px;color:var(--muted);line-height:1.6}
+.btn{border:1px solid transparent;border-radius:12px;padding:12px 16px;font-weight:700;font-size:13px;display:inline-flex;align-items:center;justify-content:center;gap:8px;transition:transform .18s,background .18s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:linear-gradient(135deg,var(--gold2),var(--gold));color:#211b10;box-shadow:0 7px 20px rgba(230,189,101,.12)}
+.btn-dark{background:var(--surface3);border-color:var(--line);color:var(--text)}
+.btn-danger{background:rgba(255,119,119,.12);border-color:rgba(255,119,119,.2);color:var(--red)}
+.btn-small{padding:8px 10px;font-size:12px;border-radius:9px}
+.stats-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;margin-bottom:22px}
+.stat-card{padding:19px;border:1px solid var(--line);border-radius:18px;background:linear-gradient(145deg,#202020,#171717);min-width:0}
+.stat-top{display:flex;justify-content:space-between;align-items:center;gap:8px;color:var(--muted);font-size:12px;margin-bottom:17px}
+.stat-icon{width:34px;height:34px;display:grid;place-items:center;border-radius:11px;background:rgba(230,189,101,.10);color:var(--gold2);font-size:16px}
+.stat-value{font:800 clamp(23px,3vw,31px) Manrope,sans-serif;letter-spacing:-.8px;overflow-wrap:anywhere}
+.stat-unit{font-size:12px;color:var(--muted);font-weight:500}
+.stat-foot{font-size:11px;color:var(--muted);margin-top:8px}
+.grid-two{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-bottom:18px}
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;min-width:0}
+.panel-title{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:17px}
+.panel-title h3{font:700 15px Manrope,sans-serif;margin:0}
+.panel-title span{font-size:11px;color:var(--muted)}
+.chart{display:flex;align-items:flex-end;gap:10px;height:160px;padding:10px 2px 0;border-bottom:1px solid var(--line)}
+.bar-item{flex:1;min-width:0;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:8px}
+.bar-value{font-size:10px;color:var(--gold2);white-space:nowrap}
+.bar{width:min(28px,70%);min-height:3px;border-radius:7px 7px 2px 2px;background:linear-gradient(180deg,var(--gold2),#9d7934);transition:height .25s}
+.bar-label{font-size:10px;color:var(--muted);padding-top:8px}
+.tech-list{display:grid;gap:14px}
+.tech-row{display:grid;grid-template-columns:minmax(75px,.8fr) 2fr auto;gap:10px;align-items:center;font-size:12px}
+.tech-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.track{height:7px;border-radius:10px;background:#333;overflow:hidden}
+.track span{display:block;height:100%;border-radius:10px;background:linear-gradient(90deg,#a9853d,var(--gold2))}
+.tech-hours{font-weight:700;color:var(--gold2);white-space:nowrap}
+.panel-wide{margin-bottom:18px}
+.table-wrap{overflow-x:auto}
+table{width:100%;border-collapse:collapse;min-width:670px;font-size:12px}
+th{text-align:left;padding:12px 10px;color:var(--muted);font-weight:600;border-bottom:1px solid var(--line);white-space:nowrap}
+td{padding:13px 10px;border-bottom:1px solid rgba(255,255,255,.055);vertical-align:middle}
+tbody tr:last-child td{border-bottom:0}
+td strong{font-weight:600}
+.tag{display:inline-flex;align-items:center;padding:5px 8px;border-radius:8px;font-size:10px;background:#2c2922;color:var(--gold2);white-space:nowrap}
+.hs-pill{color:var(--gold2);font-weight:700}
+.row-actions{display:flex;gap:6px}
+.icon-btn{border:1px solid var(--line);background:var(--surface3);color:var(--text);border-radius:8px;padding:7px 8px;font-size:12px}
+.icon-btn.delete{color:var(--red)}
+.empty{padding:28px 12px;text-align:center;color:var(--muted);font-size:13px;line-height:1.7}
+.form-layout{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.field{min-width:0}
+.field.full{grid-column:1/-1}
+label{display:block;font-size:12px;color:#d2cec4;margin-bottom:7px;font-weight:600}
+input,select,textarea{width:100%;background:#111;border:1px solid #383838;color:var(--text);padding:12px 13px;border-radius:11px;min-width:0}
+input:focus,select:focus,textarea:focus{border-color:var(--gold);outline:none}
+input::placeholder,textarea::placeholder{color:#777}
+select option{background:#191919}
+.form-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.helper{color:var(--muted);font-size:11px;line-height:1.6;margin-top:8px}
+.filter-row{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:15px}
+.filter-row input,.filter-row select{max-width:220px;margin:0}
+.summary-line{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:16px}
+.summary-chip{background:#222;border:1px solid var(--line);padding:9px 12px;border-radius:10px;color:var(--muted);font-size:11px}
+.summary-chip strong{color:var(--gold2);margin-left:5px}
+.export-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.export-card{padding:22px;border-radius:18px;border:1px solid var(--line);background:var(--surface2)}
+.export-icon{font-size:24px;margin-bottom:13px}
+.export-card h3{font:700 16px Manrope,sans-serif;margin:0 0 7px}
+.export-card p{font-size:12px;color:var(--muted);line-height:1.6;min-height:40px;margin:0 0 17px}
+.settings-list{display:grid;gap:12px}
+.setting-row{display:flex;justify-content:space-between;align-items:center;gap:20px;padding:16px;border-radius:14px;background:var(--surface2);border:1px solid var(--line)}
+.setting-row strong{font-size:13px}
+.setting-row p{margin:5px 0 0;font-size:11px;color:var(--muted);line-height:1.5}
+.setting-value{color:var(--gold2);font-weight:700;white-space:nowrap}
+.bottom-nav{position:fixed;z-index:20;bottom:0;left:0;right:0;padding:9px 10px calc(9px + env(safe-area-inset-bottom));background:rgba(18,18,18,.94);backdrop-filter:blur(18px);border-top:1px solid rgba(230,189,101,.18);display:flex;justify-content:center}
+.nav-inner{width:min(700px,100%);display:grid;grid-template-columns:repeat(5,1fr);gap:4px}
+.nav-btn{border:0;background:transparent;color:#89857d;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;padding:8px 3px 5px;border-radius:12px;font-size:10px;font-weight:600;min-width:0}
+.nav-icon{font-size:19px;line-height:1.1}
+.nav-btn.active{color:var(--gold2);background:rgba(230,189,101,.09)}
+.nav-btn.active:after{content:"";width:16px;height:2px;border-radius:4px;background:var(--gold);position:absolute;bottom:8px}
+.toast{position:fixed;z-index:40;bottom:100px;left:50%;transform:translateX(-50%);background:#292820;border:1px solid rgba(230,189,101,.35);color:var(--text);padding:12px 17px;border-radius:12px;font-size:12px;box-shadow:var(--shadow);display:none;max-width:90%;text-align:center}
+.toast.show{display:block}
+.modal-backdrop{position:fixed;inset:0;z-index:30;background:rgba(0,0,0,.7);display:none;align-items:center;justify-content:center;padding:18px}
+.modal-backdrop.show{display:flex}
+.modal{width:min(560px,100%);max-height:90vh;overflow:auto;background:#191919;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:var(--shadow)}
+.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:20px}
+.modal-head h3{margin:0;font:800 19px Manrope,sans-serif}
+.modal-close{background:#2a2a2a;color:white;border:1px solid var(--line);border-radius:9px;padding:7px 11px}
+@media(min-width:850px){body{padding-bottom:30px}.bottom-nav{position:sticky;bottom:12px;width:min(760px,calc(100% - 30px));margin:0 auto 15px;border:1px solid rgba(230,189,101,.18);border-radius:18px;box-shadow:var(--shadow)}.nav-btn.active:after{bottom:19px}.toast{bottom:100px}}
+@media(max-width:760px){.app{padding:17px 14px 25px}.topbar{margin-bottom:22px}.top-right{display:none}.stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.stat-card{padding:15px}.stat-top{margin-bottom:12px}.stat-value{font-size:26px}.grid-two{grid-template-columns:1fr}.hero{padding:20px}.hero-bottom{align-items:flex-start;flex-direction:column}.page-heading{align-items:flex-start;flex-direction:column}.date-chip{display:none}.panel{padding:16px}.form-layout{grid-template-columns:1fr}.field.full{grid-column:auto}.export-grid{grid-template-columns:1fr}.export-card p{min-height:0}.filter-row input,.filter-row select{max-width:none;flex:1 1 145px}}
+@media(max-width:380px){.brand h1{font-size:16px}.brand-logo,.brand-mark{width:44px;height:44px}.stats-grid{gap:8px}.stat-card{padding:12px}.stat-value{font-size:22px}.stat-icon{width:29px;height:29px}.nav-btn{font-size:9px}.nav-icon{font-size:17px}}
+@media print{
+ body{background:white;color:#111;padding:0}.app{max-width:none;padding:0}.topbar,.bottom-nav,.no-print,.hero,.page-heading .date-chip{display:none!important}
+ .page{display:none!important}.page.active{display:block!important}.panel,.stat-card,.export-card{background:white;color:#111;border:1px solid #ddd;box-shadow:none}
+ .muted,.subtitle,.stat-top,.stat-foot,.panel-title span,.tech-name,.bar-label{color:#555!important}
+ th,td{border-color:#ddd;color:#111}table{min-width:0}.table-wrap{overflow:visible}
+ #page-home .grid-two{display:none}#page-home .stats-grid{grid-template-columns:repeat(4,1fr)}
+}
+
+/* Extension Chef PV — conserve la direction artistique noire et or de HS Solami */
+.nav-inner{grid-template-columns:repeat(6,1fr)}
+.nav-btn{min-width:0}
+.pv-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin-bottom:18px}
+.pv-module{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px;min-width:0}
+.pv-module h3{font:700 15px Manrope,sans-serif;margin:0 0 14px;display:flex;align-items:center;justify-content:space-between;gap:10px}
+.pv-module .field{margin-bottom:12px}
+.pv-module .field input,.pv-module .field select,.pv-module .field textarea{background:#111;border:1px solid #383838;color:var(--text);padding:11px 12px;border-radius:10px}
+.pv-row{display:flex;gap:10px;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding:11px 0;font-size:12px}
+.pv-row:first-of-type{border-top:0}.pv-row-main{min-width:0;flex:1}.pv-row-main strong{display:block}.pv-row-main small{display:block;color:var(--muted);margin-top:3px}
+.pv-badge{display:inline-block;padding:5px 8px;border-radius:8px;background:#302a1e;color:var(--gold2);font-size:10px;white-space:nowrap}
+.pv-check{display:flex;gap:9px;align-items:flex-start;border-top:1px solid var(--line);padding:10px 0;font-size:12px;color:#d8d3c8}.pv-check input{width:auto;margin-top:2px;accent-color:var(--gold)}
+.pv-actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.pv-note{font-size:11px;line-height:1.65;color:var(--muted)}
+.pv-callout{border:1px solid rgba(230,189,101,.22);background:rgba(230,189,101,.06);border-radius:13px;padding:13px;font-size:12px;line-height:1.65;color:#ddd4bd;margin-top:10px}
+.pv-progress{height:7px;background:#333;border-radius:20px;overflow:hidden;margin-top:8px}.pv-progress span{display:block;height:100%;background:linear-gradient(90deg,#9d7934,var(--gold2))}
+@media(max-width:700px){.pv-grid{grid-template-columns:1fr}.nav-inner{grid-template-columns:repeat(6,minmax(0,1fr))}.nav-btn{font-size:9px}.nav-icon{font-size:17px}}
+
+</style>
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <div class="brand">
+      <img class="brand-logo" src="logo appli.jpeg" alt="HS Solami" onerror="this.style.display='none';document.getElementById('brandFallback').style.display='grid'">
+      <div id="brandFallback" class="brand-mark" style="display:none">HS</div>
+      <div><h1>HS SOLAMI</h1><p>Gestion d'équipe · Heures supplémentaires</p></div>
+    </div>
+    <div class="top-right"><div><span class="status-dot"></span>Données enregistrées sur cet appareil<br><span id="todayTop"></span></div></div>
+  </header>
+
+  <main>
+    <section id="page-home" class="page active">
+      <div class="page-heading">
+        <div><div class="eyebrow">Tableau de bord</div><h2>Bonjour Joan 👋</h2><p class="subtitle">Voici le résumé de l'activité de l'équipe.</p></div>
+        <div class="date-chip" id="todayChip"></div>
+      </div>
+      <div class="hero">
+        <div class="welcome">VOTRE ESPACE DE GESTION</div>
+        <h2>Le suivi de l'équipe,<br><span>simplement.</span></h2>
+        <div class="hero-bottom"><div class="hero-note">Suivez les heures supplémentaires, les déplacements<br>et les interventions depuis un seul endroit.</div><button class="btn btn-gold" onclick="openPage('interventions');nouvelleIntervention()">＋ Nouvelle intervention</button></div>
+      </div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Heures sup.</span><span class="stat-icon">◷</span></div><div class="stat-value" id="totalHS">0,00 <span class="stat-unit">h</span></div><div class="stat-foot">Cumul total enregistré</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Kilomètres</span><span class="stat-icon">⌁</span></div><div class="stat-value" id="totalKM">0 <span class="stat-unit">km</span></div><div class="stat-foot">Déplacements cumulés</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Cette semaine</span><span class="stat-icon">▦</span></div><div class="stat-value" id="totalSemaine">0,00 <span class="stat-unit">h</span></div><div class="stat-foot">Du lundi au dimanche</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Ce mois</span><span class="stat-icon">▤</span></div><div class="stat-value" id="totalMois">0,00 <span class="stat-unit">h</span></div><div class="stat-foot">Cumul du mois en cours</div></article>
+      </div>
+      <div class="grid-two">
+        <section class="panel"><div class="panel-title"><h3>Heures sup. par semaine</h3><span>8 dernières semaines</span></div><div class="chart" id="weeklyChart"></div></section>
+        <section class="panel"><div class="panel-title"><h3>Répartition par technicien</h3><span>Cumul HS</span></div><div class="tech-list" id="techList"></div></section>
+      </div>
+      <section class="panel panel-wide"><div class="panel-title"><h3>Dernières interventions</h3><button class="btn btn-dark btn-small" onclick="openPage('interventions')">Voir l'historique →</button></div><div class="table-wrap"><table><thead><tr><th>Date</th><th>Technicien</th><th>Chantier</th><th>Type</th><th>Durée</th><th>Heures sup.</th><th>Km</th></tr></thead><tbody id="recentTable"></tbody></table></div></section>
+    </section>
+
+    <section id="page-interventions" class="page">
+      <div class="page-heading"><div><div class="eyebrow">Saisie & historique</div><h2>Interventions</h2><p class="subtitle">Ajoutez et gérez les interventions de l'équipe.</p></div><div class="date-chip" id="countChip">0 intervention</div></div>
+      <section class="panel" id="formPanel">
+        <div class="panel-title"><h3 id="formTitle">＋ Nouvelle intervention</h3><span>Champs marqués * obligatoires</span></div>
+        <form id="interventionForm">
+          <div class="form-layout">
+            <div class="field"><label for="technicien">Technicien *</label><select id="technicien" required><option>Joan</option><option>Technicien 2</option><option>Technicien 3</option></select></div>
+            <div class="field"><label for="date">Date *</label><input type="date" id="date" required></div>
+            <div class="field"><label for="type">Type d'intervention</label><select id="type"><option>Installation</option><option>SAV</option><option>Maintenance</option><option>Dépannage</option><option>Autre</option></select></div>
+            <div class="field"><label for="chantier">Nom du chantier *</label><input id="chantier" type="text" placeholder="Ex. Maison Dupont" required></div>
+            <div class="field"><label for="debut">Heure de début *</label><input id="debut" type="time" required></div>
+            <div class="field"><label for="fin">Heure de fin *</label><input id="fin" type="time" required></div>
+            <div class="field"><label for="pause">Pause (minutes)</label><input id="pause" type="number" min="0" value="60"></div>
+            <div class="field"><label for="km">Kilomètres</label><input id="km" type="number" min="0" step="0.1" placeholder="0"></div>
+            <div class="field"><label for="panier">Prime panier (€)</label><input id="panier" type="number" min="0" step="0.01" value="0"></div>
+            <div class="field"><label for="deplacement">Prime déplacement (€)</label><input id="deplacement" type="number" min="0" step="0.01" value="0"></div>
+            <div class="field full"><label for="notes">Notes</label><textarea id="notes" rows="3" placeholder="Informations complémentaires…"></textarea></div>
+          </div>
+          <div class="helper">Calcul automatique : durée travaillée = fin − début − pause. Les heures au-delà de 7 h travaillées sont comptabilisées en heures supplémentaires. Pour un poste qui se termine après minuit, indiquez l'heure de fin réelle et vérifiez le calcul avant d'enregistrer.</div>
+          <div class="form-actions"><button type="submit" class="btn btn-gold" id="submitBtn">＋ Ajouter l'intervention</button><button type="button" class="btn btn-dark" id="cancelEditBtn" style="display:none" onclick="annulerEdition()">Annuler la modification</button></div>
+        </form>
+      </section>
+      <section class="panel panel-wide" style="margin-top:18px">
+        <div class="panel-title"><h3>Historique de l'équipe</h3><span id="historySummary">Toutes les interventions</span></div>
+        <div class="filter-row no-print"><input type="search" id="searchHistory" placeholder="Rechercher chantier, technicien…"><select id="filterTech"><option value="">Tous les techniciens</option></select><input type="month" id="filterMonth" aria-label="Filtrer par mois"></div>
+        <div class="summary-line"><div class="summary-chip">Interventions <strong id="filteredCount">0</strong></div><div class="summary-chip">Heures sup. <strong id="filteredHS">0,00 h</strong></div><div class="summary-chip">Kilomètres <strong id="filteredKM">0 km</strong></div></div>
+        <div class="table-wrap"><table><thead><tr><th>Date</th><th>Technicien</th><th>Chantier</th><th>Type</th><th>Horaires</th><th>Durée</th><th>HS</th><th>Km</th><th class="no-print">Actions</th></tr></thead><tbody id="historyTable"></tbody></table></div>
+      </section>
+    </section>
+
+    <section id="page-stats" class="page">
+      <div class="page-heading"><div><div class="eyebrow">Analyse de l'activité</div><h2>Statistiques</h2><p class="subtitle">Visualisez les cumuls de l'équipe et de chaque technicien.</p></div></div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Heures sup.</span><span class="stat-icon">◷</span></div><div class="stat-value" id="statsHS">0,00 h</div><div class="stat-foot">Toutes périodes</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Kilomètres</span><span class="stat-icon">⌁</span></div><div class="stat-value" id="statsKM">0 km</div><div class="stat-foot">Toutes périodes</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Primes panier</span><span class="stat-icon">€</span></div><div class="stat-value" id="statsPanier">0,00 €</div><div class="stat-foot">Total déclaré</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Déplacements</span><span class="stat-icon">↗</span></div><div class="stat-value" id="statsDepl">0,00 €</div><div class="stat-foot">Total déclaré</div></article>
+      </div>
+      <div class="grid-two">
+        <section class="panel"><div class="panel-title"><h3>Heures supplémentaires</h3><span>8 dernières semaines</span></div><div class="chart" id="statsChart"></div></section>
+        <section class="panel"><div class="panel-title"><h3>Par technicien</h3><span>Totaux enregistrés</span></div><div class="tech-list" id="statsTechList"></div></section>
+      </div>
+      <section class="panel"><div class="panel-title"><h3>Détail par technicien</h3><span>Heures, km et primes</span></div><div class="table-wrap"><table><thead><tr><th>Technicien</th><th>Interventions</th><th>Heures sup.</th><th>Kilomètres</th><th>Prime panier</th><th>Déplacement</th></tr></thead><tbody id="statsTable"></tbody></table></div></section>
+    </section>
+
+    <section id="page-export" class="page">
+      <div class="page-heading"><div><div class="eyebrow">Documents & partage</div><h2>Export & rapports</h2><p class="subtitle">Préparez un export pour le suivi et le partage des heures.</p></div></div>
+      <div class="export-grid">
+        <article class="export-card"><div class="export-icon">📄</div><h3>Exporter en PDF</h3><p>Ouvre la fenêtre d'impression pour enregistrer le tableau affiché en PDF.</p><button class="btn btn-gold" onclick="exportPDF()">Préparer le PDF →</button></article>
+        <article class="export-card"><div class="export-icon">▤</div><h3>Exporter les données CSV</h3><p>Télécharge les interventions dans un fichier compatible avec Excel et Google Sheets.</p><button class="btn btn-dark" onclick="exportCSV()">Télécharger le CSV ↓</button></article>
+        <article class="export-card"><div class="export-icon">✉</div><h3>Préparer un e-mail</h3><p>Crée un e-mail avec le récapitulatif des heures et des déplacements. Le CSV reste à joindre manuellement.</p><button class="btn btn-dark" onclick="exportMail()">Préparer l'e-mail →</button></article>
+        <article class="export-card"><div class="export-icon">◷</div><h3>Résumé de l'activité</h3><p>Un aperçu rapide des volumes actuellement enregistrés sur cet appareil.</p><div class="summary-line"><div class="summary-chip">Interventions<strong id="exportCount">0</strong></div><div class="summary-chip">HS<strong id="exportHS">0 h</strong></div><div class="summary-chip">Km<strong id="exportKM">0</strong></div></div><button class="btn btn-dark" onclick="copierResume()">Copier le résumé</button></article>
+      </div>
+      <p class="helper" style="margin-top:15px">Les données sont stockées localement dans le navigateur de cet appareil. Pour les conserver ailleurs, exportez régulièrement le CSV. L'export PDF utilise la fonction d'impression du navigateur.</p>
+    </section>
+
+    <section id="page-settings" class="page">
+      <div class="page-heading"><div><div class="eyebrow">Préférences de l'application</div><h2>Paramètres</h2><p class="subtitle">Réglages et gestion locale des données.</p></div></div>
+      <section class="panel">
+        <div class="panel-title"><h3>Préférences</h3><span>HS Solami</span></div>
+        <div class="settings-list">
+          <div class="setting-row"><div><strong>Heures normales par jour</strong><p>Seuil utilisé pour calculer les heures supplémentaires.</p></div><div class="setting-value">7 h / jour</div></div>
+          <div class="setting-row"><div><strong>Stockage des interventions</strong><p>Les données restent dans le navigateur sur cet appareil.</p></div><div class="setting-value">Local</div></div>
+          <div class="setting-row"><div><strong>Nombre d'interventions</strong><p>Entrées actuellement sauvegardées.</p></div><div class="setting-value" id="settingsCount">0</div></div>
+          <div class="setting-row"><div><strong>Dernier état</strong><p>Les changements sont sauvegardés automatiquement après chaque ajout, modification ou suppression.</p></div><div class="setting-value">Auto</div></div>
+        </div>
+      </section>
+      <section class="panel" style="margin-top:16px">
+        <div class="panel-title"><h3>Sauvegarde & maintenance</h3></div>
+        <p class="subtitle" style="margin-bottom:16px">Avant de changer d'appareil ou de navigateur, exportez vos données en CSV. Le CSV est une copie de vos informations, mais il ne peut pas être réimporté automatiquement par cette version.</p>
+        <div class="form-actions"><button class="btn btn-dark" onclick="exportCSV()">↓ Exporter une sauvegarde CSV</button><button class="btn btn-danger" onclick="effacerToutesDonnees()">Supprimer toutes les interventions</button></div>
+      </section>
+    </section>
+
+    <section id="page-chef" class="page">
+      <div class="page-heading"><div><div class="eyebrow">Espace chef d’équipe photovoltaïque</div><h2>Chef PV ☀</h2><p class="subtitle">Prépare tes chantiers, organise l’équipe et progresse vers responsable technique — dans le même style noir et or que HS Solami.</p></div><div class="date-chip">SOLAMI · Chef d’équipe</div></div>
+      <div class="stats-grid">
+        <article class="stat-card"><div class="stat-top"><span>Chantiers suivis</span><span class="stat-icon">⌂</span></div><div class="stat-value" id="pvStatJobs">0</div><div class="stat-foot">Tous statuts confondus</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Membres d’équipe</span><span class="stat-icon">♟</span></div><div class="stat-value" id="pvStatTeam">0</div><div class="stat-foot">Techniciens enregistrés</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Matériel prêt</span><span class="stat-icon">◇</span></div><div class="stat-value" id="pvStatMaterial">0%</div><div class="stat-foot">Checklist matériel</div></article>
+        <article class="stat-card"><div class="stat-top"><span>Formation chef</span><span class="stat-icon">✦</span></div><div class="stat-value" id="pvStatTraining">0%</div><div class="stat-foot">Modules terminés</div></article>
+      </div>
+      <div class="pv-grid">
+        <section class="pv-module"><h3>🏗️ Chantiers <span class="pv-badge">Suivi</span></h3>
+          <form id="pvJobForm"><div class="field"><label for="pvJobName">Nom du chantier *</label><input id="pvJobName" required placeholder="Ex. Villa Dupont"></div><div class="form-layout"><div class="field"><label for="pvJobPlace">Ville / secteur</label><input id="pvJobPlace" placeholder="Saint-Leu"></div><div class="field"><label for="pvJobPower">Puissance (kWc)</label><input id="pvJobPower" type="number" min="0" step="0.1" placeholder="6"></div><div class="field"><label for="pvJobPanels">Nombre de panneaux</label><input id="pvJobPanels" type="number" min="0" placeholder="14"></div><div class="field"><label for="pvJobStatus">Statut</label><select id="pvJobStatus"><option>À préparer</option><option>Planifié</option><option>En cours</option><option>Bloqué</option><option>Terminé</option></select></div></div><div class="field"><label for="pvJobNotes">Notes / blocages</label><textarea id="pvJobNotes" rows="2" placeholder="Accès, météo, matériel manquant…"></textarea></div><button class="btn btn-gold" type="submit">＋ Ajouter le chantier</button></form><div id="pvJobsList" style="margin-top:14px"></div>
+        </section>
+        <section class="pv-module"><h3>👷 Gestion de l’équipe <span class="pv-badge">Terrain</span></h3>
+          <form id="pvPersonForm"><div class="field"><label for="pvPersonName">Nom du technicien *</label><input id="pvPersonName" required placeholder="Prénom / nom"></div><div class="form-layout"><div class="field"><label for="pvPersonRole">Rôle</label><select id="pvPersonRole"><option>Technicien photovoltaïque</option><option>Électricien</option><option>Apprenti</option><option>Chef d’équipe</option></select></div><div class="field"><label for="pvPersonStatus">Disponibilité</label><select id="pvPersonStatus"><option>Disponible</option><option>Sur chantier</option><option>En pause</option><option>Absent</option></select></div></div><button class="btn btn-gold" type="submit">＋ Ajouter un membre</button></form><div id="pvTeamList" style="margin-top:14px"></div>
+        </section>
+        <section class="pv-module"><h3>📦 Matériel à préparer <span class="pv-badge">Checklist</span></h3><form id="pvMaterialForm"><div class="field"><label for="pvMaterialName">Matériel</label><input id="pvMaterialName" required placeholder="Ex. rails, MC4, onduleur"></div><div class="field"><label for="pvMaterialQty">Quantité / remarque</label><input id="pvMaterialQty" placeholder="28 rails / 50 m câble"></div><button class="btn btn-dark" type="submit">＋ Ajouter à la liste</button></form><div id="pvMaterialList" style="margin-top:10px"></div></section>
+        <section class="pv-module"><h3>🦺 Sécurité chantier <span class="pv-badge">Avant départ</span></h3><p class="pv-note">Cette checklist aide au briefing mais ne remplace pas l’évaluation des risques, les procédures de l’entreprise ni les habilitations requises.</p><div id="pvSafetyList"></div><div class="pv-actions"><button class="btn btn-dark" onclick="pvSaveSafety()">Enregistrer la checklist</button></div><div id="pvSafetyMessage" class="pv-note" style="margin-top:8px"></div></section>
+        <section class="pv-module"><h3>⚡ Assistant technique PV <span class="pv-badge">Fiches pratiques</span></h3><div class="field"><label for="pvTechTopic">Sujet</label><select id="pvTechTopic"><option value="structure">Structures et fixations</option><option value="panels">Pose des panneaux</option><option value="dc">Câblage DC</option><option value="inverter">Onduleur</option><option value="ac">Raccordement AC</option><option value="commission">Mise en service</option><option value="fault">Diagnostic de panne</option><option value="sav">Maintenance et SAV</option></select></div><button class="btn btn-gold" onclick="pvShowTech()">Afficher la fiche</button><div id="pvTechResult" class="pv-callout">Choisis un sujet pour afficher les points de contrôle.</div><div class="pv-callout"><strong>⚠️ Sécurité :</strong> toute opération électrique doit être réalisée uniquement selon les procédures applicables, par une personne formée, habilitée et autorisée. En cas de doute, arrêter et escalader.</div></section>
+        <section class="pv-module"><h3>🎓 Formation chef d’équipe <span class="pv-badge">Progression</span></h3><p class="pv-note">Coche les compétences travaillées pour suivre ton parcours vers responsable technique.</p><div id="pvTrainingList"></div><div class="pv-progress"><span id="pvTrainingBar" style="width:0%"></span></div><div class="pv-note" id="pvTrainingText" style="margin-top:8px"></div></section>
+        <section class="pv-module"><h3>📄 Compte rendu de chantier <span class="pv-badge">Rapport</span></h3><div class="field"><label for="pvReportJob">Chantier</label><select id="pvReportJob"></select></div><div class="field"><label for="pvReportDone">Travaux réalisés</label><textarea id="pvReportDone" rows="2" placeholder="Pose, câblage, contrôles…"></textarea></div><div class="field"><label for="pvReportIssues">Difficultés / réserves</label><textarea id="pvReportIssues" rows="2" placeholder="Matériel manquant, anomalie…"></textarea></div><div class="field"><label for="pvReportNext">Prochaine étape</label><textarea id="pvReportNext" rows="2" placeholder="Actions à prévoir…"></textarea></div><div class="pv-actions"><button class="btn btn-gold" onclick="pvGenerateReport()">Générer le rapport</button><button class="btn btn-dark" onclick="pvPrintReport()">Imprimer / PDF</button></div><div id="pvReportPreview" class="pv-callout" style="display:none"></div></section>
+        <section class="pv-module"><h3>🧭 Briefing de la journée <span class="pv-badge">Organisation</span></h3><div class="field"><label for="pvBriefing">Priorités et répartition</label><textarea id="pvBriefing" rows="5" placeholder="1. Briefing sécurité\n2. Répartition des tâches\n3. Contrôle matériel\n4. Vérifications fin de chantier"></textarea></div><button class="btn btn-dark" onclick="pvSaveBriefing()">Enregistrer le briefing</button><p class="pv-note" id="pvBriefingMsg"></p><div class="pv-callout">Conseil : commence chaque journée par les risques, les objectifs, les rôles, le matériel critique et les critères de fin de chantier.</div></section>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<nav class="bottom-nav" aria-label="Navigation principale">
+  <div class="nav-inner">
+    <button class="nav-btn active" data-page="home" onclick="openPage('home')"><span class="nav-icon">⌂</span><span>Accueil</span></button>
+    <button class="nav-btn" data-page="interventions" onclick="openPage('interventions')"><span class="nav-icon">＋</span><span>Interventions</span></button>
+    <button class="nav-btn" data-page="stats" onclick="openPage('stats')"><span class="nav-icon">▥</span><span>Statistiques</span></button>
+    <button class="nav-btn" data-page="export" onclick="openPage('export')"><span class="nav-icon">▤</span><span>Export</span></button>
+    <button class="nav-btn" data-page="settings" onclick="openPage('settings')"><span class="nav-icon">⚙</span><span>Paramètres</span></button>
+    <button class="nav-btn" data-page="chef" onclick="openPage('chef')"><span class="nav-icon">☀</span><span>Chef PV</span></button>
+  </div>
+</nav>
+<div class="toast" id="toast" role="status"></div>
+
+<div class="modal-backdrop" id="editModal" role="dialog" aria-modal="true" aria-labelledby="editModalTitle">
+  <div class="modal">
+    <div class="modal-head"><h3 id="editModalTitle">Modifier l'intervention</h3><button class="modal-close" onclick="fermerModal()">✕</button></div>
+    <p class="subtitle">Pour conserver les données cohérentes, modifiez l'entrée depuis le formulaire principal.</p>
+    <button class="btn btn-gold" onclick="fermerModal();openPage('interventions');document.getElementById('formPanel').scrollIntoView({behavior:'smooth'})">Ouvrir le formulaire →</button>
+  </div>
+</div>
+
 <script>
-const $=x=>document.getElementById(x);const initial={jobs:[{id:1,name:'Villa Dupont',place:'Saint-Leu',power:6,panels:14,progress:70,status:'En cours',notes:''},{id:2,name:'Résidence Océanis',place:'Saint-Pierre',power:12,panels:28,progress:0,status:'Planifié',notes:'Vérifier livraison des rails'}],people:[{id:1,name:'Antoine',role:'Technicien PV',status:'Sur chantier'},{id:2,name:'Kevin',role:'Technicien PV',status:'Sur chantier'},{id:3,name:'Léo',role:'Apprenti',status:'Sur chantier'}],hours:[],materials:[{name:'Panneaux PV 500 Wc',qty:'14 / 14',ready:true},{name:'Rails de montage',qty:'28 / 28',ready:true},{name:'Connecteurs MC4',qty:'20 / 20',ready:true},{name:'Câble solaire 6 mm²',qty:'50 m',ready:true},{name:'Onduleur',qty:'1 / 1',ready:true}],safety:['Plan de prévention consulté','EPI adaptés et en bon état','Accès en toiture sécurisé','Météo et vent vérifiés','Zone de travail balisée','Risques électriques identifiés','Briefing sécurité réalisé'],safetyDone:[],training:[['Organiser une équipe',true],['Communiquer efficacement',true],['Gérer les imprévus',false],['Contrôler la qualité',false],['Leadership et responsabilités',false],['Lire plans et schémas',false],['Normes et procédures',false],['Gestion du temps',false]]};let db;try{db=JSON.parse(localStorage.getItem('solamiTeam'))||initial}catch(e){db=initial}function save(){localStorage.setItem('solamiTeam',JSON.stringify(db));render()}function esc(s){return String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}function fmt(v){let n=Math.round((+v||0)*60);return Math.floor(n/60)+'h'+String(n%60).padStart(2,'0')}function go(p){document.querySelectorAll('.section').forEach(x=>x.classList.remove('active'));$('page-'+p).classList.add('active');document.querySelectorAll('[data-page]').forEach(x=>x.classList.toggle('active',x.dataset.page===p));window.scrollTo(0,0)}document.querySelectorAll('[data-page]').forEach(x=>x.onclick=()=>go(x.dataset.page));document.querySelectorAll('[data-go]').forEach(x=>x.onclick=()=>go(x.dataset.go));
-function render(){let jobs=db.jobs.map(j=>`<div class="row"><div class="grow"><b>${esc(j.name)} — ${esc(j.place)}</b><div class="muted">${j.panels} panneaux · ${j.power} kWc · ${j.status}</div><div class="bar"><span style="width:${j.progress}%"></span></div><small>${j.progress}%</small></div><button class="secondary" onclick="editJob(${j.id})">Modifier</button></div>`).join('')||'<p class="muted">Aucun chantier.</p>';$('homeJobs').innerHTML=jobs;$('jobsList').innerHTML=jobs;$('homeTeam').innerHTML=db.people.map(p=>`<div class="row"><div class="grow"><b>${esc(p.name)}</b><div class="muted">${esc(p.role)}</div></div><span class="pill">${esc(p.status)}</span></div>`).join('');$('teamList').innerHTML=db.people.map(p=>`<div class="row"><div class="grow"><b>${esc(p.name)}</b><div class="muted">${esc(p.role)}</div></div><select onchange="statusPerson(${p.id},this.value)">${['Sur chantier','Disponible','Absent','En pause'].map(s=>`<option ${p.status===s?'selected':''}>${s}</option>`).join('')}</select><button class="red" onclick="delPerson(${p.id})">×</button></div>`).join('');['hourPerson'].forEach(id=>$(id).innerHTML=db.people.map(p=>`<option value="${p.id}">${esc(p.name)}</option>`).join(''));['hourJob','reportJob'].forEach(id=>$(id).innerHTML=db.jobs.map(j=>`<option value="${j.id}">${esc(j.name)}</option>`).join(''));let n=db.hours.reduce((a,h)=>a+h.normal,0),o=db.hours.reduce((a,h)=>a+h.over,0);$('sumNormal').textContent=fmt(n);$('sumOver').textContent=fmt(o);$('sumAll').textContent=fmt(n+o);let today=new Date().toISOString().slice(0,10),hs=db.hours.filter(h=>h.date===today),hn=hs.reduce((a,h)=>a+h.normal,0),ho=hs.reduce((a,h)=>a+h.over,0);$('homeNormal').textContent=fmt(hn||7);$('homeOver').textContent=fmt(ho||.5);$('homeTotal').textContent=fmt(hn+ho||7.5);$('hourRows').innerHTML=db.hours.slice().reverse().map(h=>`<tr><td>${esc(h.date)}</td><td>${esc(h.person)}</td><td>${esc(h.job)}</td><td>${fmt(h.normal)}</td><td>${fmt(h.over)}</td><td>${esc(h.comment)}</td><td><button class="red" onclick="delHour(${h.id})">×</button></td></tr>`).join('')||'<tr><td colspan="7" class="muted">Aucune saisie.</td></tr>';$('materialsList').innerHTML=db.materials.map((m,i)=>`<div class="row"><input type="checkbox" ${m.ready?'checked':''} onchange="matToggle(${i},this.checked)"><div class="grow"><b>${esc(m.name)}</b><div class="muted">${esc(m.qty)}</div></div><span class="pill">${m.ready?'Prêt':'À vérifier'}</span><button class="red" onclick="delMat(${i})">×</button></div>`).join('');$('safetyList').innerHTML=db.safety.map((s,i)=>`<label class="row"><input type="checkbox" ${db.safetyDone.includes(i)?'checked':''} onchange="safetyToggle(${i},this.checked)"><span>${esc(s)}</span></label>`).join('');$('safetyStatus').textContent=`${db.safetyDone.length}/${db.safety.length} points cochés.`;let done=db.training.filter(t=>t[1]).length,pct=Math.round(done/db.training.length*100);$('trainingPct').textContent=pct+'%';$('trainingBar').style.width=pct+'%';$('trainingList').innerHTML=db.training.map((t,i)=>`<label class="row"><input type="checkbox" ${t[1]?'checked':''} onchange="trainingToggle(${i},this.checked)"><span class="grow">${esc(t[0])}</span><span class="pill">${t[1]?'Terminé':'À faire'}</span></label>`).join('');$('hourDate').value=$('hourDate').value||today;$('reportDate').value=$('reportDate').value||today}
-$('jobForm').onsubmit=e=>{e.preventDefault();let id=+$('jobId').value||Date.now(),j={id,name:$('jobName').value,place:$('jobPlace').value,power:+$('jobPower').value||0,panels:+$('jobPanels').value||0,progress:Math.min(100,Math.max(0,+$('jobProgress').value||0)),status:$('jobStatus').value,notes:$('jobNotes').value},i=db.jobs.findIndex(x=>x.id===id);if(i<0)db.jobs.push(j);else db.jobs[i]=j;e.target.reset();$('jobId').value='';$('jobProgress').value=0;save()};window.editJob=id=>{let j=db.jobs.find(x=>x.id===id);for(let [k,v] of Object.entries({jobId:j.id,jobName:j.name,jobPlace:j.place,jobPower:j.power,jobPanels:j.panels,jobProgress:j.progress,jobStatus:j.status,jobNotes:j.notes}))$(k).value=v;go('jobs')};$('clearJob').onclick=()=>{$('jobForm').reset();$('jobId').value='';$('jobProgress').value=0};$('personForm').onsubmit=e=>{e.preventDefault();db.people.push({id:Date.now(),name:$('personName').value,role:$('personRole').value,status:$('personStatus').value});e.target.reset();save()};window.statusPerson=(id,s)=>{db.people.find(p=>p.id===id).status=s;save()};window.delPerson=id=>{db.people=db.people.filter(p=>p.id!==id);save()};$('hoursForm').onsubmit=e=>{e.preventDefault();let p=db.people.find(p=>p.id===+$('hourPerson').value),j=db.jobs.find(j=>j.id===+$('hourJob').value);db.hours.push({id:Date.now(),date:$('hourDate').value,person:p?.name||'',job:j?.name||'',normal:+$('normal').value||0,over:+$('overtime').value||0,break:+$('break').value||0,comment:$('comment').value});$('comment').value='';save()};window.delHour=id=>{db.hours=db.hours.filter(h=>h.id!==id);save()};$('export').onclick=()=>{let data=[['Date','Technicien','Chantier','Heures normales','Heures supplémentaires','Pause','Commentaire'],...db.hours.map(h=>[h.date,h.person,h.job,h.normal,h.over,h.break,h.comment])].map(r=>r.map(x=>'"'+String(x??'').replace(/"/g,'""')+'"').join(';')).join('\r\n'),a=document.createElement('a');a.href=URL.createObjectURL(new Blob(['\ufeff'+data],{type:'text/csv;charset=utf-8'}));a.download='heures-solami.csv';a.click()};$('addMat').onclick=()=>$('matForm').style.display=$('matForm').style.display==='none'?'block':'none';$('matForm').onsubmit=e=>{e.preventDefault();db.materials.push({name:$('matName').value,qty:$('matQty').value,ready:false});e.target.reset();save()};window.matToggle=(i,v)=>{db.materials[i].ready=v;save()};window.delMat=i=>{db.materials.splice(i,1);save()};window.safetyToggle=(i,v)=>{db.safetyDone=v?[...new Set([...db.safetyDone,i])]:db.safetyDone.filter(x=>x!==i);save()};$('saveSafety').onclick=()=>$('safetyStatus').textContent='Checklist sauvegardée sur cet appareil.';window.trainingToggle=(i,v)=>{db.training[i][1]=v;save()};
-const tech={structure:'Vérifier le plan, le support, les fixations et les prescriptions du fabricant. Contrôler l’étanchéité et l’alignement avant de poursuivre.',panels:'Contrôler le modèle et l’état des modules. Respecter les zones de serrage et couples prescrits par le fabricant. Vérifier alignement et absence de dommage.',dc:'Vérifier le schéma, le repérage des chaînes, la compatibilité des connecteurs et le cheminement des câbles. Appliquer la procédure de sécurité prévue.',inverter:'Vérifier référence, emplacement, ventilation et dégagements. Suivre la notice fabricant et consigner les codes défauts sans contourner les protections.',ac:'Contrôler le schéma, les protections, les sections prévues et le repérage. Les essais électriques doivent être effectués par une personne habilitée.',commission:'Vérifier les contrôles préalables, les protections, les réglages et les essais prévus au dossier. Archiver les résultats et anomalies.',fault:'Relever le symptôme et le code défaut, consulter la notice officielle, noter les conditions d’apparition et faire uniquement les contrôles autorisés.',sav:'Recueillir références, photos, date et conditions de panne. Vérifier procédure et garantie fabricant, sécuriser la zone et documenter les actions.'};$('showTech').onclick=()=>{$('techResult').innerHTML='<b>'+esc($('topic').selectedOptions[0].text)+'</b><p>'+esc(tech[$('topic').value])+'</p><b>Vigilance :</b> ne jamais intervenir sans formation, habilitation, autorisation et procédure adaptées.'};$('makeReport').onclick=()=>{let j=db.jobs.find(j=>j.id===+$('reportJob').value),text=`COMPTE RENDU DE CHANTIER\nChantier : ${j?.name||'—'} (${j?.place||'—'})\nDate : ${$('reportDate').value}\n\nTravaux réalisés :\n${$('done').value||'Non renseigné'}\n\nDifficultés / réserves :\n${$('issues').value||'Aucune indiquée'}\n\nProchaine étape :\n${$('next').value||'Non renseignée'}`;$('reportPreview').style.display='block';$('reportPreview').innerHTML='<pre style="white-space:pre-wrap;font:inherit">'+esc(text)+'</pre>';$('reportPreview').dataset.text=text};$('print').onclick=()=>{if(!$('reportPreview').dataset.text)$('makeReport').click();let w=window.open('','_blank');if(!w){alert('Autorise les fenêtres pop-up pour imprimer.');return}w.document.write('<pre style="font:16px Arial;white-space:pre-wrap">'+esc($('reportPreview').dataset.text)+'</pre>');w.document.close();w.print()};$('search').oninput=e=>{let q=e.target.value.toLowerCase();if(db.jobs.some(j=>(j.name+' '+j.place).toLowerCase().includes(q)))go('jobs');else if(db.people.some(p=>p.name.toLowerCase().includes(q)))go('team')};render();
-</script></body></html>
+const STORAGE_KEY = "hs_solami";
+let donnees = [];
+let indexEdition = null;
+
+function lireDonnees(){
+  try{
+    const brut = JSON.parse(localStorage.getItem(STORAGE_KEY) || "[]");
+    donnees = Array.isArray(brut) ? brut.map(normaliserLigne) : [];
+  }catch(e){ donnees = []; }
+}
+function normaliserLigne(l){
+  return {
+    date:l.date||"", technicien:l.technicien||"Joan", type:l.type||"Installation",
+    chantier:l.chantier||"", debut:l.debut||"", fin:l.fin||"", pause:Number(l.pause||0),
+    km:Number(l.km||0), panier:Number(l.panier||0), deplacement:Number(l.deplacement||0),
+    notes:l.notes||"", hs:Number(l.hs ?? calculHS(l.debut,l.fin,l.pause))
+  };
+}
+function sauvegarder(){ localStorage.setItem(STORAGE_KEY,JSON.stringify(donnees)); }
+function calculHS(debut,fin,pause=0){
+  if(!debut||!fin) return 0;
+  const [dh,dm]=debut.split(":").map(Number),[fh,fm]=fin.split(":").map(Number);
+  let minutes=(fh*60+fm)-(dh*60+dm);
+  if(minutes<0) minutes+=1440;
+  minutes-=Number(pause||0);
+  return Math.round(Math.max(0,minutes/60-7)*100)/100;
+}
+function duree(l){
+  if(!l.debut||!l.fin) return 0;
+  const [dh,dm]=l.debut.split(":").map(Number),[fh,fm]=l.fin.split(":").map(Number);
+  let m=fh*60+fm-(dh*60+dm); if(m<0)m+=1440;
+  return Math.max(0,(m-Number(l.pause||0))/60);
+}
+function fmt(n,dec=2){return Number(n||0).toLocaleString("fr-FR",{minimumFractionDigits:dec,maximumFractionDigits:dec});}
+function fmtDate(s){if(!s)return "—";const p=s.split("-");return p.length===3?`${p[2]}/${p[1]}/${p[0]}`:s;}
+function safe(s){return String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#039;"}[c]));}
+function dateLocale(d){return d.toLocaleDateString("fr-FR",{weekday:"long",day:"numeric",month:"long",year:"numeric"});}
+function debutSemaine(d){const x=new Date(d.getFullYear(),d.getMonth(),d.getDate());const jour=(x.getDay()+6)%7;x.setDate(x.getDate()-jour);x.setHours(0,0,0,0);return x;}
+function dansSemaine(dateStr,ref=new Date()){
+  if(!dateStr)return false;const d=new Date(dateStr+"T12:00:00"),start=debutSemaine(ref),end=new Date(start);end.setDate(end.getDate()+7);return d>=start&&d<end;
+}
+function dansMois(dateStr,ref=new Date()){if(!dateStr)return false;const d=new Date(dateStr+"T12:00:00");return d.getFullYear()===ref.getFullYear()&&d.getMonth()===ref.getMonth();}
+function somme(arr,key){return arr.reduce((t,l)=>t+Number(l[key]||0),0);}
+function openPage(name){
+  document.querySelectorAll(".page").forEach(p=>p.classList.remove("active"));
+  document.querySelectorAll(".nav-btn").forEach(b=>b.classList.toggle("active",b.dataset.page===name));
+  const page=document.getElementById("page-"+name);if(page)page.classList.add("active");
+  if(name==="interventions")renderHistorique();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+function showToast(msg){
+  const el=document.getElementById("toast");el.textContent=msg;el.classList.add("show");
+  clearTimeout(showToast.timer);showToast.timer=setTimeout(()=>el.classList.remove("show"),2600);
+}
+function remplirFiltres(){
+  const sel=document.getElementById("filterTech"),old=sel.value;
+  const names=[...new Set(donnees.map(l=>l.technicien).filter(Boolean))].sort((a,b)=>a.localeCompare(b,"fr"));
+  sel.innerHTML='<option value="">Tous les techniciens</option>'+names.map(n=>`<option value="${safe(n)}">${safe(n)}</option>`).join("");
+  if(names.includes(old))sel.value=old;
+}
+function render(){
+  const now=new Date();
+  document.getElementById("todayTop").textContent=dateLocale(now);
+  document.getElementById("todayChip").textContent=dateLocale(now);
+  const hs=somme(donnees,"hs"),km=somme(donnees,"km");
+  const hsSemaine=somme(donnees.filter(l=>dansSemaine(l.date,now)),"hs");
+  const hsMois=somme(donnees.filter(l=>dansMois(l.date,now)),"hs");
+  document.getElementById("totalHS").innerHTML=`${fmt(hs)} <span class="stat-unit">h</span>`;
+  document.getElementById("totalKM").innerHTML=`${fmt(km,km%1?1:0)} <span class="stat-unit">km</span>`;
+  document.getElementById("totalSemaine").innerHTML=`${fmt(hsSemaine)} <span class="stat-unit">h</span>`;
+  document.getElementById("totalMois").innerHTML=`${fmt(hsMois)} <span class="stat-unit">h</span>`;
+  document.getElementById("statsHS").textContent=fmt(hs)+" h";
+  document.getElementById("statsKM").textContent=fmt(km,km%1?1:0)+" km";
+  document.getElementById("statsPanier").textContent=fmt(somme(donnees,"panier"))+" €";
+  document.getElementById("statsDepl").textContent=fmt(somme(donnees,"deplacement"))+" €";
+  document.getElementById("countChip").textContent=donnees.length+" intervention"+(donnees.length>1?"s":"");
+  document.getElementById("settingsCount").textContent=donnees.length;
+  document.getElementById("exportCount").textContent=donnees.length;
+  document.getElementById("exportHS").textContent=fmt(hs)+" h";
+  document.getElementById("exportKM").textContent=fmt(km,km%1?1:0);
+  renderRecent();renderChart("weeklyChart");renderChart("statsChart");renderTech("techList");renderTech("statsTechList");renderStatsTable();remplirFiltres();renderHistorique();
+}
+function renderRecent(){
+  const tbody=document.getElementById("recentTable");
+  const arr=[...donnees].sort((a,b)=>b.date.localeCompare(a.date)).slice(0,5);
+  tbody.innerHTML=arr.length?arr.map(l=>`<tr><td>${fmtDate(l.date)}</td><td>${safe(l.technicien)}</td><td>${safe(l.chantier)}</td><td><span class="tag">${safe(l.type)}</span></td><td>${fmt(duree(l))} h</td><td class="hs-pill">${fmt(l.hs)} h</td><td>${fmt(l.km, l.km%1?1:0)}</td></tr>`).join(""):'<tr><td colspan="7"><div class="empty">Aucune intervention pour le moment.<br>Appuyez sur « Nouvelle intervention » pour commencer.</div></td></tr>';
+}
+function weeklyValues(){
+  const now=new Date(),start=debutSemaine(now),out=[];
+  for(let i=7;i>=0;i--){const d=new Date(start);d.setDate(start.getDate()-i*7);const end=new Date(d);end.setDate(d.getDate()+7);
+    const total=somme(donnees.filter(l=>{if(!l.date)return false;const x=new Date(l.date+"T12:00:00");return x>=d&&x<end;}),"hs");
+    out.push({label:"Sem. "+String(Math.ceil((d.getDate()+new Date(d.getFullYear(),d.getMonth(),1).getDay())/7)),value:total,date:d});
+  }return out;
+}
+function renderChart(id){
+  const el=document.getElementById(id),vals=weeklyValues(),max=Math.max(...vals.map(v=>v.value),1);
+  el.innerHTML=vals.map(v=>`<div class="bar-item"><span class="bar-value">${fmt(v.value)}h</span><div class="bar" style="height:${Math.max(3,v.value/max*100)}%"></div><span class="bar-label">${safe(v.label)}</span></div>`).join("");
+}
+function groupTech(){
+  const map={};donnees.forEach(l=>{const n=l.technicien||"Non renseigné";if(!map[n])map[n]={name:n,hs:0,km:0,panier:0,deplacement:0,count:0};map[n].hs+=Number(l.hs||0);map[n].km+=Number(l.km||0);map[n].panier+=Number(l.panier||0);map[n].deplacement+=Number(l.deplacement||0);map[n].count++;});
+  return Object.values(map).sort((a,b)=>b.hs-a.hs);
+}
+function renderTech(id){
+  const el=document.getElementById(id),arr=groupTech(),max=Math.max(...arr.map(t=>t.hs),1);
+  el.innerHTML=arr.length?arr.map(t=>`<div class="tech-row"><span class="tech-name">${safe(t.name)}</span><div class="track"><span style="width:${Math.max(1,t.hs/max*100)}%"></span></div><span class="tech-hours">${fmt(t.hs)} h</span></div>`).join(""):'<div class="empty">Les statistiques apparaîtront après la première intervention.</div>';
+}
+function renderStatsTable(){
+  const arr=groupTech(),el=document.getElementById("statsTable");
+  el.innerHTML=arr.length?arr.map(t=>`<tr><td><strong>${safe(t.name)}</strong></td><td>${t.count}</td><td class="hs-pill">${fmt(t.hs)} h</td><td>${fmt(t.km,t.km%1?1:0)} km</td><td>${fmt(t.panier)} €</td><td>${fmt(t.deplacement)} €</td></tr>`).join(""):'<tr><td colspan="6"><div class="empty">Aucune donnée à afficher.</div></td></tr>';
+}
+function renderHistorique(){
+  const search=(document.getElementById("searchHistory")?.value||"").trim().toLowerCase();
+  const tech=document.getElementById("filterTech")?.value||"";
+  const month=document.getElementById("filterMonth")?.value||"";
+  const arr=donnees.map((l,i)=>({...l,_i:i})).filter(l=>(!tech||l.technicien===tech)&&(!month||l.date.startsWith(month))&&(!search||[l.technicien,l.chantier,l.type,l.notes,l.date].join(" ").toLowerCase().includes(search))).sort((a,b)=>b.date.localeCompare(a.date));
+  document.getElementById("filteredCount").textContent=arr.length;
+  document.getElementById("filteredHS").textContent=fmt(somme(arr,"hs"))+" h";
+  document.getElementById("filteredKM").textContent=fmt(somme(arr,"km"),somme(arr,"km")%1?1:0)+" km";
+  document.getElementById("historySummary").textContent=arr.length+" résultat"+(arr.length>1?"s":"");
+  document.getElementById("historyTable").innerHTML=arr.length?arr.map(l=>`<tr><td>${fmtDate(l.date)}</td><td>${safe(l.technicien)}</td><td><strong>${safe(l.chantier)}</strong>${l.notes?`<div class="helper">${safe(l.notes)}</div>`:""}</td><td><span class="tag">${safe(l.type)}</span></td><td>${safe(l.debut)}–${safe(l.fin)}</td><td>${fmt(duree(l))} h</td><td class="hs-pill">${fmt(l.hs)} h</td><td>${fmt(l.km,l.km%1?1:0)}</td><td class="no-print"><div class="row-actions"><button class="icon-btn" title="Modifier" onclick="editer(${l._i})">✎</button><button class="icon-btn delete" title="Supprimer" onclick="supprimer(${l._i})">×</button></div></td></tr>`).join(""):'<tr><td colspan="9"><div class="empty">Aucune intervention ne correspond à cette recherche.</div></td></tr>';
+}
+function nouvelleIntervention(){
+  annulerEdition();
+  document.getElementById("date").value=new Date().toLocaleDateString("en-CA");
+  document.getElementById("formPanel").scrollIntoView({behavior:"smooth",block:"start"});
+}
+function editer(index){
+  const l=donnees[index];if(!l)return;indexEdition=index;
+  document.getElementById("technicien").value=l.technicien;
+  document.getElementById("date").value=l.date;document.getElementById("type").value=l.type;
+  document.getElementById("chantier").value=l.chantier;document.getElementById("debut").value=l.debut;
+  document.getElementById("fin").value=l.fin;document.getElementById("pause").value=l.pause;
+  document.getElementById("km").value=l.km;document.getElementById("panier").value=l.panier;
+  document.getElementById("deplacement").value=l.deplacement;document.getElementById("notes").value=l.notes;
+  document.getElementById("formTitle").textContent="✎ Modifier l'intervention";
+  document.getElementById("submitBtn").textContent="Enregistrer les modifications";
+  document.getElementById("cancelEditBtn").style.display="inline-flex";
+  openPage("interventions");document.getElementById("formPanel").scrollIntoView({behavior:"smooth"});
+}
+function annulerEdition(){
+  indexEdition=null;document.getElementById("interventionForm").reset();
+  document.getElementById("pause").value=60;document.getElementById("panier").value=0;document.getElementById("deplacement").value=0;
+  document.getElementById("date").value=new Date().toLocaleDateString("en-CA");
+  document.getElementById("formTitle").textContent="＋ Nouvelle intervention";
+  document.getElementById("submitBtn").textContent="＋ Ajouter l'intervention";
+  document.getElementById("cancelEditBtn").style.display="none";
+}
+document.getElementById("interventionForm").addEventListener("submit",function(e){
+  e.preventDefault();
+  const l={date:document.getElementById("date").value,technicien:document.getElementById("technicien").value,type:document.getElementById("type").value,chantier:document.getElementById("chantier").value.trim(),debut:document.getElementById("debut").value,fin:document.getElementById("fin").value,pause:Number(document.getElementById("pause").value||0),km:Number(document.getElementById("km").value||0),panier:Number(document.getElementById("panier").value||0),deplacement:Number(document.getElementById("deplacement").value||0),notes:document.getElementById("notes").value.trim()};
+  if(!l.date||!l.chantier||!l.debut||!l.fin){showToast("Merci de remplir les champs obligatoires.");return;}
+  if(l.pause<0||l.km<0||l.panier<0||l.deplacement<0){showToast("Les valeurs numériques doivent être positives.");return;}
+  l.hs=calculHS(l.debut,l.fin,l.pause);
+  if(indexEdition!==null){donnees[indexEdition]=l;showToast("Intervention modifiée et sauvegardée.");}
+  else{donnees.push(l);showToast("Intervention ajoutée et sauvegardée.");}
+  sauvegarder();annulerEdition();render();
+});
+function supprimer(index){
+  if(!confirm("Supprimer cette intervention ? Cette action est définitive."))return;
+  donnees.splice(index,1);sauvegarder();render();showToast("Intervention supprimée.");
+}
+function effacerToutesDonnees(){
+  if(!donnees.length){showToast("Aucune intervention à supprimer.");return;}
+  if(!confirm("Attention : supprimer toutes les interventions enregistrées sur cet appareil ? Pensez à exporter une sauvegarde CSV avant de continuer."))return;
+  if(!confirm("Dernière confirmation : effacer définitivement toutes les données HS Solami de ce navigateur ?"))return;
+  donnees=[];sauvegarder();render();showToast("Toutes les interventions ont été supprimées.");
+}
+function csvCell(v){return '"'+String(v??"").replace(/"/g,'""')+'"';}
+function exportCSV(){
+  const headers=["Date","Technicien","Type","Chantier","Début","Fin","Pause minutes","Durée heures","Heures supplémentaires","Kilomètres","Prime panier €","Prime déplacement €","Notes"];
+  const rows=donnees.map(l=>[l.date,l.technicien,l.type,l.chantier,l.debut,l.fin,l.pause,duree(l).toFixed(2),Number(l.hs||0).toFixed(2),l.km,l.panier,l.deplacement,l.notes]);
+  const csv="\uFEFF"+[headers,...rows].map(r=>r.map(csvCell).join(";")).join("\r\n");
+  const blob=new Blob([csv],{type:"text/csv;charset=utf-8;"});
+  const url=URL.createObjectURL(blob),a=document.createElement("a");a.href=url;a.download="HS_SOLAMI_"+new Date().toISOString().slice(0,10)+".csv";document.body.appendChild(a);a.click();a.remove();URL.revokeObjectURL(url);showToast("Export CSV téléchargé.");
+}
+function exportPDF(){
+  const active=document.querySelector(".page.active");
+  if(active&&active.id==="page-interventions"){document.getElementById("historyTable").scrollIntoView({block:"start"});}
+  window.print();
+}
+function resumeTexte(){
+  return "HS SOLAMI — Récapitulatif\nDate : "+dateLocale(new Date())+"\nInterventions : "+donnees.length+"\nHeures supplémentaires : "+fmt(somme(donnees,"hs"))+" h\nKilomètres : "+fmt(somme(donnees,"km"),1)+" km\nPrime panier : "+fmt(somme(donnees,"panier"))+" €\nPrime déplacement : "+fmt(somme(donnees,"deplacement"))+" €";
+}
+function exportMail(){
+  const subject=encodeURIComponent("Récapitulatif heures supplémentaires — HS Solami");
+  const body=encodeURIComponent(resumeTexte()+"\n\nLe détail des interventions peut être joint en exportant le CSV depuis l'application.");
+  window.location.href="mailto:?subject="+subject+"&body="+body;
+}
+async function copierResume(){
+  try{await navigator.clipboard.writeText(resumeTexte());showToast("Résumé copié dans le presse-papiers.");}
+  catch(e){window.prompt("Copiez le résumé ci-dessous :",resumeTexte());}
+}
+document.getElementById("searchHistory").addEventListener("input",renderHistorique);
+document.getElementById("filterTech").addEventListener("change",renderHistorique);
+document.getElementById("filterMonth").addEventListener("change",renderHistorique);
+document.getElementById("date").value=new Date().toLocaleDateString("en-CA");
+lireDonnees();render();
+
+// ---------------- Extension Chef PV (données séparées des heures HS) ----------------
+const PV_KEY='hs_solami_chef_pv_v1';
+const PV_DEFAULT={jobs:[],people:[{id:1,name:'Joan',role:'Chef d’équipe',status:'Disponible'}],materials:[{id:1,name:'Panneaux photovoltaïques',qty:'À confirmer',ready:false},{id:2,name:'Rails et fixations',qty:'À confirmer',ready:false},{id:3,name:'Connecteurs et câble DC',qty:'À confirmer',ready:false},{id:4,name:'Onduleur / protections AC',qty:'À confirmer',ready:false}],safety:['Plan de prévention / consignes consultés','EPI adaptés et en bon état','Accès et protection contre les chutes vérifiés','Météo et conditions de travail vérifiées','Zone de travail sécurisée et balisée','Risques électriques identifiés et procédures prévues','Briefing sécurité réalisé avec l’équipe'],safetyDone:[],training:[{name:'Organiser une équipe',done:false},{name:'Communiquer et faire un briefing',done:false},{name:'Gérer les imprévus',done:false},{name:'Contrôler la qualité',done:false},{name:'Leadership et responsabilités',done:false},{name:'Lire plans et schémas',done:false},{name:'Préparer matériel et planning',done:false},{name:'Normes et procédures',done:false}],briefing:''};
+let pvDB;try{pvDB=JSON.parse(localStorage.getItem(PV_KEY))||JSON.parse(JSON.stringify(PV_DEFAULT))}catch(e){pvDB=JSON.parse(JSON.stringify(PV_DEFAULT))}
+function pvSave(){localStorage.setItem(PV_KEY,JSON.stringify(pvDB));pvRender()}
+function pvEsc(x){return safe(x)}
+function pvRender(){
+ const jn=document.getElementById('pvJobsList'),tn=document.getElementById('pvTeamList'),mn=document.getElementById('pvMaterialList');if(!jn)return;
+ document.getElementById('pvStatJobs').textContent=pvDB.jobs.length;document.getElementById('pvStatTeam').textContent=pvDB.people.length;
+ const ready=pvDB.materials.filter(x=>x.ready).length;document.getElementById('pvStatMaterial').textContent=(pvDB.materials.length?Math.round(ready/pvDB.materials.length*100):0)+'%';
+ const td=pvDB.training.filter(x=>x.done).length,tp=Math.round(td/pvDB.training.length*100);document.getElementById('pvStatTraining').textContent=tp+'%';document.getElementById('pvTrainingBar').style.width=tp+'%';document.getElementById('pvTrainingText').textContent=`${td}/${pvDB.training.length} modules terminés.`;
+ jn.innerHTML=pvDB.jobs.length?pvDB.jobs.map(j=>`<div class="pv-row"><div class="pv-row-main"><strong>${pvEsc(j.name)} <span class="pv-badge">${pvEsc(j.status)}</span></strong><small>${pvEsc(j.place||'Lieu à préciser')} · ${pvEsc(j.power||0)} kWc · ${pvEsc(j.panels||0)} panneaux</small>${j.notes?`<small>${pvEsc(j.notes)}</small>`:''}</div><button class="icon-btn delete" onclick="pvDeleteJob(${j.id})">×</button></div>`).join(''):'<div class="empty">Aucun chantier ajouté. Crée ton premier chantier ci-dessus.</div>';
+ tn.innerHTML=pvDB.people.map(p=>`<div class="pv-row"><div class="pv-row-main"><strong>${pvEsc(p.name)}</strong><small>${pvEsc(p.role)}</small></div><select style="max-width:130px;padding:7px" onchange="pvPersonStatus(${p.id},this.value)">${['Disponible','Sur chantier','En pause','Absent'].map(v=>`<option ${p.status===v?'selected':''}>${v}</option>`).join('')}</select><button class="icon-btn delete" onclick="pvDeletePerson(${p.id})">×</button></div>`).join('')||'<div class="empty">Aucun membre enregistré.</div>';
+ mn.innerHTML=pvDB.materials.map(m=>`<label class="pv-check"><input type="checkbox" ${m.ready?'checked':''} onchange="pvToggleMaterial(${m.id},this.checked)"><span style="flex:1"><strong>${pvEsc(m.name)}</strong><br><span class="pv-note">${pvEsc(m.qty||'Quantité à confirmer')}</span></span><button type="button" class="icon-btn delete" onclick="pvDeleteMaterial(${m.id})">×</button></label>`).join('')||'<div class="empty">Liste matériel vide.</div>';
+ document.getElementById('pvSafetyList').innerHTML=pvDB.safety.map((x,i)=>`<label class="pv-check"><input type="checkbox" ${pvDB.safetyDone.includes(i)?'checked':''} onchange="pvToggleSafety(${i},this.checked)"><span>${pvEsc(x)}</span></label>`).join('');
+ document.getElementById('pvTrainingList').innerHTML=pvDB.training.map((x,i)=>`<label class="pv-check"><input type="checkbox" ${x.done?'checked':''} onchange="pvToggleTraining(${i},this.checked)"><span>${pvEsc(x.name)}</span><span class="pv-badge">${x.done?'Terminé':'À faire'}</span></label>`).join('');
+ const sel=document.getElementById('pvReportJob'),old=sel.value;sel.innerHTML=pvDB.jobs.map(j=>`<option value="${j.id}">${pvEsc(j.name)}</option>`).join('')||'<option value="">Aucun chantier</option>';if([...sel.options].some(o=>o.value===old))sel.value=old;
+ document.getElementById('pvBriefing').value=pvDB.briefing||'';
+}
+document.getElementById('pvJobForm').addEventListener('submit',e=>{e.preventDefault();pvDB.jobs.push({id:Date.now(),name:document.getElementById('pvJobName').value.trim(),place:document.getElementById('pvJobPlace').value.trim(),power:Number(document.getElementById('pvJobPower').value)||0,panels:Number(document.getElementById('pvJobPanels').value)||0,status:document.getElementById('pvJobStatus').value,notes:document.getElementById('pvJobNotes').value.trim()});e.target.reset();pvSave();showToast('Chantier ajouté')});
+document.getElementById('pvPersonForm').addEventListener('submit',e=>{e.preventDefault();pvDB.people.push({id:Date.now(),name:document.getElementById('pvPersonName').value.trim(),role:document.getElementById('pvPersonRole').value,status:document.getElementById('pvPersonStatus').value});e.target.reset();pvSave();showToast('Membre ajouté')});
+document.getElementById('pvMaterialForm').addEventListener('submit',e=>{e.preventDefault();pvDB.materials.push({id:Date.now(),name:document.getElementById('pvMaterialName').value.trim(),qty:document.getElementById('pvMaterialQty').value.trim(),ready:false});e.target.reset();pvSave();showToast('Matériel ajouté')});
+window.pvDeleteJob=id=>{if(confirm('Supprimer ce chantier de la liste Chef PV ?')){pvDB.jobs=pvDB.jobs.filter(x=>x.id!==id);pvSave()}};
+window.pvDeletePerson=id=>{if(confirm('Retirer ce membre de la liste Chef PV ?')){pvDB.people=pvDB.people.filter(x=>x.id!==id);pvSave()}};
+window.pvDeleteMaterial=id=>{pvDB.materials=pvDB.materials.filter(x=>x.id!==id);pvSave()};
+window.pvPersonStatus=(id,status)=>{let p=pvDB.people.find(x=>x.id===id);if(p)p.status=status;pvSave()};
+window.pvToggleMaterial=(id,v)=>{let m=pvDB.materials.find(x=>x.id===id);if(m)m.ready=v;pvSave()};
+window.pvToggleSafety=(i,v)=>{pvDB.safetyDone=v?[...new Set([...pvDB.safetyDone,i])]:pvDB.safetyDone.filter(x=>x!==i);pvRender()};
+window.pvSaveSafety=()=>{document.getElementById('pvSafetyMessage').textContent=`Checklist : ${pvDB.safetyDone.length}/${pvDB.safety.length} points cochés. Vérifie toujours les conditions réelles sur le chantier.`;showToast('Checklist actualisée')};
+window.pvToggleTraining=(i,v)=>{pvDB.training[i].done=v;pvSave()};
+window.pvSaveBriefing=()=>{pvDB.briefing=document.getElementById('pvBriefing').value;localStorage.setItem(PV_KEY,JSON.stringify(pvDB));document.getElementById('pvBriefingMsg').textContent='Briefing enregistré sur cet appareil.';showToast('Briefing enregistré')};
+const PV_TECH={
+ structure:['Structures et fixations','Vérifier les plans et prescriptions du fabricant, le support, le type de fixation, l’alignement et les points d’étanchéité. Contrôler les fixations selon les couples et méthodes prescrits.','Ne jamais improviser une fixation ou une solution d’étanchéité. Travail en hauteur : appliquer les protections prévues.'],
+ panels:['Pose des panneaux','Contrôler références et état des modules, manutentionner selon la notice, respecter les zones de serrage et les couples prescrits, puis effectuer le contrôle visuel.','Ne pas poser un module endommagé sans procédure adaptée. Sécuriser la manutention et la toiture.'],
+ dc:['Câblage DC','Comparer le câblage au schéma, vérifier repérage, compatibilité des connecteurs, cheminement, protection mécanique et contrôles prescrits.','Les modules éclairés peuvent produire une tension. Intervention réservée aux personnes formées, habilitées et autorisées, selon procédure.'],
+ inverter:['Onduleur','Vérifier la référence, l’emplacement, les dégagements et la ventilation. Utiliser la notice fabricant pour paramètres et codes défauts ; consigner les contrôles réalisés.','Ne pas ouvrir ou intervenir sous tension sans habilitation, autorisation et procédure adaptées.'],
+ ac:['Raccordement AC','Suivre le schéma électrique, vérifier les protections, sections, repérage et contrôles exigés par le dossier et les règles applicables.','Toute opération électrique doit être faite par une personne habilitée et autorisée, selon la procédure de l’entreprise.'],
+ commission:['Mise en service','Vérifier que les contrôles préalables sont documentés, suivre la procédure fabricant, vérifier les protections et consigner les résultats.','Ne pas contourner une protection ni poursuivre si un contrôle critique échoue.'],
+ fault:['Diagnostic de panne','Relever le symptôme et le code exact, identifier le modèle, consulter la documentation officielle, noter l’historique et les résultats des contrôles autorisés.','Ne pas réarmer en boucle. Arrêter et escalader si le diagnostic implique un risque ou une opération non autorisée.'],
+ sav:['Maintenance et SAV','Collecter références, photos, date, circonstances et code défaut. Vérifier les garanties et la procédure fabricant, sécuriser la zone et documenter les actions.','Ne pas entreprendre de réparation risquée ou non autorisée ; contacter le responsable compétent.']};
+window.pvShowTech=()=>{let t=PV_TECH[document.getElementById('pvTechTopic').value];document.getElementById('pvTechResult').innerHTML=`<strong>${pvEsc(t[0])}</strong><br>${pvEsc(t[1])}<br><br><strong>Vigilance :</strong> ${pvEsc(t[2])}`};
+window.pvGenerateReport=()=>{let id=Number(document.getElementById('pvReportJob').value),j=pvDB.jobs.find(x=>x.id===id);let txt=`COMPTE RENDU DE CHANTIER\nChantier : ${j?j.name:'Non renseigné'}\nLieu : ${j?j.place:'—'}\nDate : ${new Date().toLocaleDateString('fr-FR')}\n\nTravaux réalisés :\n${document.getElementById('pvReportDone').value||'Non renseigné'}\n\nDifficultés / réserves :\n${document.getElementById('pvReportIssues').value||'Aucune renseignée'}\n\nProchaine étape :\n${document.getElementById('pvReportNext').value||'Non renseignée'}`;let el=document.getElementById('pvReportPreview');el.style.display='block';el.textContent=txt;el.dataset.report=txt};
+window.pvPrintReport=()=>{let el=document.getElementById('pvReportPreview');if(!el.dataset.report){pvGenerateReport()}let w=window.open('','_blank');if(!w){showToast('Autorise les fenêtres pop-up pour imprimer');return}w.document.write('<!doctype html><html lang="fr"><meta charset="utf-8"><title>Rapport chantier</title><style>body{font:15px Arial;white-space:pre-wrap;padding:28px;color:#111}</style><body>'+pvEsc(el.dataset.report||'')+'</body></html>');w.document.close();w.print()};
+// Le stockage Chef PV est séparé : les données de l'application d'heures existante sont conservées.
+const oldOpenPage=openPage;openPage=function(name){oldOpenPage(name);if(name==='chef')pvRender()};
+
+</script>
+</body>
+</html>
+
